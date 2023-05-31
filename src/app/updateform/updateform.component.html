@@ -1,0 +1,13 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      <ion-label position="floating">Рядок №1:</ion-label>
+      <ion-input [value]="anagram.str1" #Inputa></ion-input>
+    </ion-card-title>
+    <ion-item>
+      <ion-label position="floating">Рядок №2:</ion-label>
+      <ion-input [value]="anagram.str2" #Inputb></ion-input>
+    </ion-item>
+  </ion-card-header>
+  <ion-button (click)="check(Inputa.value, Inputb.value)">Перевірити</ion-button>
+</ion-card>

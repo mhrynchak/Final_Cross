@@ -1,0 +1,17 @@
+<app-myform (anagramAdd)="addAnagram($event)"></app-myform>
+
+<ion-card *ngFor="let anagram of anagrams; let i=index">
+  
+  <ion-card-header>
+    <ion-card-title> Анаграма №{{i + 1}} </ion-card-title>
+    <ion-item>Рядок №1: {{anagram.str1}}</ion-item>
+    <ion-item>Рядок №2: {{anagram.str2}}</ion-item>
+  </ion-card-header>
+
+  <ion-button (click)="update()">Pедагувати</ion-button>
+  
+  <app-updateform [anagram]="anagram" [show]="show_update" *ngIf="show_update" 
+  (showChange)="showUp($event)" (anagramChange)="update_save($event, i)">
+  </app-updateform>
+
+</ion-card>

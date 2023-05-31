@@ -1,0 +1,21 @@
+<form [formGroup]="anagramForm" (ngSubmit)="onSubmit()">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Анаграма</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Рядок №1: </ion-label>
+        <ion-input id="anagram-str1" type="text" formControlName="anagramStr1"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Рядок №2</ion-label> 
+        <ion-input id="anagram-str2" type="text" formControlName="anagramStr2"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-button type="submit" color="my-color" expand="block" 
+  fill="outline" [disabled]="!anagramForm.valid">
+    Submit
+  </ion-button>
+</form>
